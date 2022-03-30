@@ -1,0 +1,70 @@
+/* TITLE ANIMATION
+
+main section h1{
+   position: relative;
+   color: white; 
+   -webkit-text-stroke:0.3vw;
+}
+
+main section h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: var(--blue);
+    -webkit-text-stroke: 0vw white;
+    border-right: 2px solid var(--blue);
+    overflow: hidden;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+
+*/
+
+nav ul li a{
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform:translateX(-50%);
+    background-color: var(--green);
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after{   
+    width: 50%;
+}
+
+
+.botao:hover{
+    background-color: var(--green);
+    transition: background-color 1s;
+}
+
+.logo:hover{
+    opacity: 50%;
+    transition: opacity 1s;
+}
+
+#icon:hover{
+    transform:rotate(360deg) ;
+    transition: 1.5s;
+}

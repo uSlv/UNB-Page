@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --font1:'Playfair Display', serif;
+    --font2:'Roboto', sans-serif;
+
+   --primary:#fff;
+   --secondary:#000;
+
+    --green:#008940;
+    --blue:#133E79;
+}
+
+.dark-theme{
+    --primary:#000106;
+    --secondary:white;
+}
+
+body{
+    font-family: var(--font2);
+    margin: 77px 90px;
+    height: 100vh;
+    background-color: var(--primary);
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+ /*NAVBAR START*/
+
+header{
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    text-align: right;
+}
+
+nav ul li{
+    margin-right: 40px;
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--secondary);
+}
+
+nav ul li a:hover{
+    color: var(--blue);
+    font-weight: 700;
+    
+}
+
+.marca{
+    align-items: center;
+    display: flex;
+    
+}
+
+.marca h1{
+    padding-left: 20px;
+    color: var(--blue);
+}
+
+.marca a{
+
+}
+
+.marca .logo{
+    width: 100px;
+}
+
+#btn-mobile{
+    display: none;
+}
+
+
+.center{
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    height: 300px;
+    padding: 2%;
+    display: block;
+}
+.flex{
+    width: 100%;
+    display: flex;
+    height:50% ;
+    flex-direction: row;
+}
+.vertical-line{
+    height: 100%;
+    width: 1px;
+    background-color: var(--green);
+    margin: 0 auto;
+}
+
+#icon{
+    width: 55px;
+    cursor: pointer;
+}
+
+/*NAVBAR END*/
+
+/*MAIN START*/
+main{
+    display: flex;
+    margin: 0 50px;
+    margin-top: 87px;
+    justify-content: space-around;
+    height: 100%;
+}
+
+main .info .center h1{
+    font-size: 80px;
+    text-align: center;
+    font-family: var(--font1);
+    color: var(--blue);
+    font-weight: 400;
+}
+
+main section h1 strong{
+    color: var(--green);
+}
+
+.info{
+    width: 50vw;
+    height: 100px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info h1{
+}
+
+/*Slider start*/
+
+
+.slider{
+    width:800px;
+    height:500px;
+    border-radius: 10px;
+    overflow: hidden;
+    min-width:800px ;
+}
+
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+    
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+    position: relative;
+}
+
+.content{
+    position: absolute; 
+    bottom: 0; 
+    color: #f1f1f1; 
+    width: 100%;
+    padding: 60px 20px; 
+    text-align: center;
+}
+
+.content p{
+    font-size: 1.5rem;
+    text-align: start;
+    padding-left: 20px;
+}
+
+.content h1{
+    font-size: 2rem;
+}
+
+.slide img{
+    width: 800px;
+    height: 500px;
+    
+}
+
+    /*css for manual slide navigation start*/
+
+    .navigation-manual{
+        position: absolute;
+        width: 800px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .manual-btn{
+        border: 2px solid white;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .manual-btn:not(:last-child){
+        margin-right: 40px;
+    }
+
+    .manual-btn:hover{
+        background-color: var(--green);
+    }
+
+    #radio1:checked ~ .first{
+        margin-left: 0;
+    }
+    #radio2:checked ~ .first{
+        margin-left: -20%;
+    }
+    #radio3:checked ~ .first{
+        margin-left: -40%;
+    }
+
+    /*css for manual slide navigation end*/
+
+    /*css for automatic slide navigation start*/
+    .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 800px;
+        justify-content: center;
+        margin-top: 460px;
+    }
+
+    .navigation-auto div{
+        border: 2px solid white;
+        padding: 5px;
+        border-radius: 10px;
+        transition: 1s;
+    }
+
+    .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+
+    #radio1:checked~.navigation-auto auto-btn1{
+        background-color: var(--blue);
+    }
+    #radio2:checked~.navigation-auto auto-btn2{
+        background-color: var(--blue);
+    }
+    #radio3:checked~.navigation-auto auto-btn3{
+        background-color: var(--blue);
+    }
+    /*css for automatic slide navigation end*/
+/*Slider end*/
+
+
+
+.center-btn{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    width: auto;
+}
+
+.botao{
+    background-color: var(--blue);
+    color: white;
+    font-size: 20px ;
+    border: none;
+    width: 300px;
+    height:50px;
+    padding: 15px 38px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 25px;
+}
+
+.botao p{
+    font-size: 30px;
+}
+
+.box-slide{
+
+}
+
+/*MAIN END*/
+
+
+/*
+ MEDIA QUERY
+*/
+
+@media (max-width:1180px){
+    nav ul{
+      display: none;
+    }
+    .marca{
+        justify-content: center;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+      }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 30%;
+        top: 120px;
+        right: 20%;
+        background: #008940e7;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+        border-radius: 20px;
+      }
+
+      #nav.active #menu {
+        height: 50%;
+        visibility: visible;
+        overflow-y: auto;
+        display: block;
+        
+      }
+
+      #menu a{
+          color: var(--primary);
+        margin: 0 1rem;
+        border-bottom: 2px solid var(--blue);
+      }
+
+      #menu li{
+          margin-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      #hamburger {
+        border-top: 2px solid;
+        width: 30px;
+        color: var(--green);
+      }
+      #hamburger::after,
+      #hamburger::before {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+        
+      }
+      #nav.active #hamburger {
+        border-top-color: transparent;
+        color: red;
+      }
+      #nav.active #hamburger::before {
+        transform: rotate(135deg);
+      }
+      #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+      }
+
+      .info{
+          margin-top: 0px;
+          margin-bottom: 350px;
+      }
+
+      .slider{
+        flex-direction: column;
+        margin-top: -100px;
+      }
+
+    main{
+        height: 100vh;
+    }
+}     
+
+@media(max-width:652px){
+    nav .marca h1{
+        display: none;
+    }
+
+    nav .marca img{
+        width: 20%;
+    }
+}
+
+@media(max-width:1500px){ 
+    
+    main{
+        height: 100vh;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .info{
+        margin-top: 0px;
+        margin-bottom: 350px;
+    }
+    .slider{
+        margin-top: 100px;
+    }
+
+}
+
+@media(max-width:960px){
+    .info{
+        margin-bottom: 500px;
+    }
+    .container{
+        min-width: 640px;
+    }
+}
+
+@media(max-width:320px){
+    .info{
+        min-width: 600px;
+        margin-top: 200px;
+        text-align: center;
+    }
+
+    .slider{
+    
+    }
+
+    .center-btn .botao{
+        height: 50px;
+        width: 300px;
+    }
+}

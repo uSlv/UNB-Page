@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <script src="https://kit.fontawesome.com/c646277984.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/stylesobre.css">
+    <link rel="stylesheet" href="style/animation.css">
+    
+</head>
+
+<body>
+    <header>
+        <!--NAVBAR START-->
+
+        <nav id="nav">
+            <div class="marca">
+                <a href="fm.unb.br">
+                    <img class="logo" src="images/logo.jpg" alt="">
+                </a>
+                <h1>FACULDADE DE MEDICINA</h1>
+            </div>
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="sobre.html">SOBRE</a></li>
+                <li><a href="#">PESQUISA</a></li>
+                <li><a href="#">EXTENSÃO</a></li>
+                <li><a href="#">LIGAS</a></li>
+            </ul>
+            <img src="images/moon.png" id="icon">
+        </nav>
+        <!--NAVBAR END-->
+    </header>
+
+
+    <main>
+        <div class="sobre">
+            <div class="container">
+                <h3 class="title">SOBRE</h3>
+
+                <p class="descripition">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                    temporibus sapiente officiis perspiciatis beatae.Ullam officia
+                    velit tenetur rerum optio adipisci quasi
+                </p>
+                <div class="botoes">
+                    <button onclick="phone()" role="button" class="botao">
+                        <i class="fa-solid fa-phone"></i>
+                        TELEFONE
+                        <p id="demo"></p>
+                    </button>
+                    <button role="button" class="botao">
+                        <i class="fa-solid fa-circle-info"></i>
+                        MAIS INFORMAÇÕES
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--SCRIPTS--> 
+    <script src="js/toggle.js"></script>
+    <script src="js/dark.js"></script>
+    <script>
+        document.getElementById("demo").addEventListener("click", phone);
+        function phone() {
+                document.getElementById("demo").innerHTML = "0000-0000";
+            }
+    </script>
+
+
+</body>
+
+</html>
