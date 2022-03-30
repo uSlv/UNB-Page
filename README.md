@@ -11,6 +11,8 @@
 
 -Manejamento do DOM
 
+-Criação da Página "Sobre"
+
 
 https://github.com/uSlv/UNB-Page
 
